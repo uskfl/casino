@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>67Casino V3</title>
+<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="auth" class="auth">
+  <div class="modal glass">
+    <h1>67Casino V3</h1>
+    <input id="email" placeholder="email" />
+    <input id="password" type="password" placeholder="password" />
+    <button id="loginBtn">Login</button>
+    <button id="regBtn">Register</button>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+
+<header class="topbar glass">
+  <div class="logo">67Casino</div>
+  <div>💰 <span id="balance">0</span></div>
+  <button id="logoutBtn">Logout</button>
+</header>
+
+<main class="grid">
+  <div class="card" onclick="openGame('crash')">Crash</div>
+  <div class="card" onclick="openGame('roulette')">Roulette</div>
+  <div class="card" onclick="openGame('slots')">Slots</div>
+  <div class="card" onclick="openGame('coin')">CoinFlip</div>
+</main>
+
+<section id="game" class="hidden game">
+  <button onclick="back()">← Back</button>
+  <div id="gameArea"></div>
+</section>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
